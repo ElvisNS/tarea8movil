@@ -3,6 +3,8 @@ import { IonReactRouter } from '@ionic/react-router';
 import { Redirect, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import Page from './pages/Page';
+import Home from './pages/Home';
+import Contratame from './pages/Contratame';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -37,6 +39,12 @@ const App: React.FC = () => {
             </Route>
             <Route path="/folder/:name" exact={true}>
               <Page />
+            </Route>
+            <Route path="/folder/Inbox" exact={true}>
+              <Home />
+            </Route>
+            <Route path="/folder/Outbox" exact={true}>
+              <Contratame />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>
